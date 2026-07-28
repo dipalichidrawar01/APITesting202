@@ -1,0 +1,13 @@
+name: API Tests
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Postman Collection
+        uses: postmanlabs/postman-cli-action@v1
+        with:
+          command: 'collection run 12345678-collection-id'
+          api-key: ${{ secrets.POSTMAN_API_KEY }}
