@@ -14,7 +14,7 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run "7457366-e16ce200-d8d6-431d-abf9-46ee01f4e5c6" -e "7457366-b2326283-e55e-4a15-ae02-ee21206b1def" -r html
+          postman collection run "7457366-6ac1de03-b3e6-4c8b-86f2-1c0c662cb8c4" -e "7457366-b2326283-e55e-4a15-ae02-ee21206b1def" -r html
       - name: Upload HTML report
         uses: actions/upload-artifact@v4
         with:
