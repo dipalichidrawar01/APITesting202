@@ -15,3 +15,9 @@ jobs:
       - name: Run API tests
         run: |
           postman collection run "7457366-e16ce200-d8d6-431d-abf9-46ee01f4e5c6" -e "7457366-b2326283-e55e-4a15-ae02-ee21206b1def" -r html
+      - name: Upload HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: postman-html-report
+          path: postman-cli-reports/
